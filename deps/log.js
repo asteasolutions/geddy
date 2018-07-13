@@ -147,7 +147,7 @@ Log.prototype = {
             }
             else {
               setTimeout(function () {
-                if (msg[0] === '"') {
+                if (msg && msg[0] === '"') {
                   msg = JSON.parse(msg);
                 }
 
