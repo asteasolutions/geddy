@@ -147,6 +147,10 @@ Log.prototype = {
             }
             else {
               setTimeout(function () {
+                if (msg[0] === '"') {
+                  msg = JSON.parse(msg);
+                }
+
                 console.log(chalk.cyan('[' + new Date().toUTCString() + ']') + ' ' + coloredLevelStr + ' ' + msg);
               }, 0);
             }
